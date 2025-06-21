@@ -45,4 +45,8 @@ Used for handling transactions within a database.
 - `ROLLBACK` – Undo changes since last commit
 - `SAVEPOINT` – Set a checkpoint to rollback to if needed
 
+## Difference between CHAR and VARCHAR2 data types?
+- `CHAR`: Fixed-length storage. If the defined length is not fully used, it is padded with spaces.
+- `VARCHAR2`: Variable-length storage. Only the actual data is stored, saving space when the full length is not needed.
+
 ---
