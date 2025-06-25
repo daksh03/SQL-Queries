@@ -49,4 +49,11 @@ Used for handling transactions within a database.
 - `CHAR`: Fixed-length storage. If the defined length is not fully used, it is padded with spaces.
 - `VARCHAR2`: Variable-length storage. Only the actual data is stored, saving space when the full length is not needed.
 
+##  Different types of joins in SQL?
+- `INNER JOIN`: Returns rows that have matching values in both tables.
+-  `LEFT JOIN` (LEFT OUTER JOIN): Returns all rows from the left table, and matching rows from the right table.
+-  `RIGHT JOIN` (RIGHT OUTER JOIN): Returns all rows from the right table, and matching rows from the left table.
+-  `FULL JOIN` (FULL OUTER JOIN): Returns all rows when there is a match in either table.
+-  `CROSS JOIN`: Produces the Cartesian product of two tables.
+
 ---
