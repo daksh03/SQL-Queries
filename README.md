@@ -56,4 +56,13 @@ Used for handling transactions within a database.
 -  `FULL JOIN` (FULL OUTER JOIN): Returns all rows when there is a match in either table.
 -  `CROSS JOIN`: Produces the Cartesian product of two tables.
 
+# Difference between WHERE and HAVING Clauses
+
+| Feature            | WHERE                                | HAVING                               |
+|--------------------|--------------------------------------|--------------------------------------|
+| Filtering Stage    | Before any grouping                  | After `GROUP BY` has been applied    |
+| Applies To         | Individual rows                      | Groups (aggregate results)           |
+| Aggregate Support  | Cannot reference aggregates (SUM, COUNT, etc.) | Can reference aggregates            |
+| Typical Order      | `WHERE` → `GROUP BY` → `HAVING` → `SELECT` | `GROUP BY` → `HAVING` → `SELECT`  |
+
 ---
