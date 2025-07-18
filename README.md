@@ -65,4 +65,11 @@ Used for handling transactions within a database.
 | Aggregate Support  | Cannot reference aggregates (SUM, COUNT, etc.) | Can reference aggregates            |
 | Typical Order      | `WHERE` → `GROUP BY` → `HAVING` → `SELECT` | `GROUP BY` → `HAVING` → `SELECT`  |
 
+## 🔍 Difference Between `DELETE` and `TRUNCATE` Commands
+
+| Command   | Description |
+|-----------|-------------|
+| **DELETE**   | - Removes rows **one at a time**.<br>- Each deletion is **logged** in the transaction log.<br>- **Supports** a `WHERE` clause for conditional deletion.<br>- **Can be rolled back** if within a transaction. |
+| **TRUNCATE** | - Removes **all rows at once** from a table.<br>- **Does not log** individual row deletions.<br>- **Does not support** a `WHERE` clause.<br>- **Faster** than `DELETE` for large datasets.<br>- **Cannot be rolled back** in some databases. |
+
 ---
