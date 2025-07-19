@@ -72,4 +72,16 @@ Used for handling transactions within a database.
 | **DELETE**   | - Removes rows **one at a time**.<br>- Each deletion is **logged** in the transaction log.<br>- **Supports** a `WHERE` clause for conditional deletion.<br>- **Can be rolled back** if within a transaction. |
 | **TRUNCATE** | - Removes **all rows at once** from a table.<br>- **Does not log** individual row deletions.<br>- **Does not support** a `WHERE` clause.<br>- **Faster** than `DELETE` for large datasets.<br>- **Cannot be rolled back** in some databases. |
 
+## 🆚 Differences Between SQL and NoSQL Databases
+
+| Feature                  | **SQL Databases**                                         | **NoSQL Databases**                                                  |
+|--------------------------|-----------------------------------------------------------|----------------------------------------------------------------------|
+| **Data Structure**       | Structured tables with rows and columns                  | Schema-less structures (e.g., key-value, document, graph, column)   |
+| **Schema**               | Fixed schema, predefined before inserting data           | Flexible schema, allows dynamic changes                             |
+| **Consistency**          | Adheres to **ACID** properties for reliable transactions | Prioritizes **CAP** properties; may sacrifice consistency for speed |
+| **Scalability**          | Vertically scalable (adding more power to servers)       | Horizontally scalable (adding more servers)                         |
+| **Use Cases**            | Best for complex queries and structured data             | Ideal for handling big data, real-time apps, and rapid development  |
+
+> ⚠️ Note: The choice between SQL and NoSQL depends on your application's needs—no one-size-fits-all!
+
 ---
