@@ -84,4 +84,19 @@ Used for handling transactions within a database.
 
 > ⚠️ Note: The choice between SQL and NoSQL depends on your application's needs—no one-size-fits-all!
 
+## ⚙️ What is a Trigger in SQL?
+
+A **trigger** is a set of SQL statements that automatically executes in response to specific events on a table.
+
+### 🚀 Common Trigger Events
+- `INSERT`
+- `UPDATE`
+- `DELETE`
+
+### 🧠 Purpose of Triggers
+- Maintain **data consistency**
+- Enforce **business rules**
+- Implement **complex integrity constraints**
+
+> 📌 Example: You might use a trigger to automatically log changes made to a customer table whenever a record is updated.
 ---
