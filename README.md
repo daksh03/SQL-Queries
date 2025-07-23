@@ -99,4 +99,29 @@ A **trigger** is a set of SQL statements that automatically executes in response
 - Implement **complex integrity constraints**
 
 > 📌 Example: You might use a trigger to automatically log changes made to a customer table whenever a record is updated.
+
+## 🗂️ View vs Table in SQL
+
+This table outlines the key differences between **Views** and **Tables** in SQL databases.
+
+| **Aspect**       | **View**                                                                 | **Table**                                                                 |
+|------------------|--------------------------------------------------------------------------|---------------------------------------------------------------------------|
+| **Definition**    | Generated from one or more tables; data depends on underlying tables.    | Data is inserted directly; independent of other objects.                  |
+| **Existence**     | Temporary for each query; recreated every time using current data.       | Permanently stored in the database until explicitly deleted.              |
+| **Data Modification** | Cannot insert, delete, or update data directly.                         | Fully supports insert, delete, and update operations.                     |
+| **Reusability**   | Easily recreated with new data using `REPLACE VIEW`.                     | Requires deletion to recreate with the same name.                         |
+| **Data Source**   | Can derive data from multiple tables.                                    | Maintains relationships via foreign keys.                                 |
+
+---
+
+### ✅ Use Views when:
+- You want a dynamic, reusable query representation.
+- You need to simplify complex joins across multiple tables.
+- You prefer a lightweight virtual table for data abstraction.
+
+### 🛠️ Use Tables when:
+- You need permanent data storage.
+- You want full control over CRUD operations.
+- You’re building relational structures for long-term use.
+
 ---
